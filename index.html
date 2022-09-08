@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  body {
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .menuBar {
+    margin-bottom: 1px;
+    margin-left : 1px;
+    position: fixed;
+    bottom: 2rem;
+    left: 1.5rem;
+    display: none;
+    z-index: 99999;
+  }
+
+  .btn {
+    background-color: DodgerBlue;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+</style>
+
+<body>
+  <script type="text/javascript" src="./assets/library/p5.mapper.min.js"></script>
+  <script src="js/DVD.js"></script>
+  <script src="sketch.js"></script>
+
+  <div id="menu_bar" class="menuBar">
+    <button class="btn" onclick="addSurface()" title="Add surface">
+      <i class="interaction fa-solid fa-plus fa-inverse"></i>
+    </button>
+    <button class="btn" onclick="removeSurface()" title="Remove surface">
+      <i class="interaction fa-solid fa-minus fa-inverse"></i>
+    </button>
+    <button class="btn" onclick="pMapper.load('maps/map.json');" title="Load layout">
+      <i class="interaction fa-solid fa-rotate-right fa-inverse"></i>
+    </button>
+    <button class="btn" onclick="pMapper.save('map.json');" title="Save layout">
+      <i class="interaction fa-solid fa-floppy-disk fa-inverse" ></i>
+    </button>
+  </div>
+</body>
+
+</html>
